@@ -8,17 +8,13 @@ fi
 # enable error logging
 set -e
 
-git config --global user.email "$GH_MAIL"
-git config --global user.name "$GH_USER"
-
-echo "$GH_MAIL"
-echo "$GH_USER"
-echo "$GH_TOKEN"
+git config --global user.email "kevin.bonduelle@corp.ovh.com"
+git config --global user.name "frisouilles"
 
 rm -rf _site
 mkdir _site
 
-git clone https://$GH_TOKEN@github.com/ovh-ux/drucker.git --branch gh-pages _site
+git clone https://${GH_TOKEN}@github.com/ovh-ux/drucker.git --branch gh-pages _site
 
 bundle exec jekyll build
 
