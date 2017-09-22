@@ -11,16 +11,16 @@ $ cd drucker
 $ make logs
 ```
 
-!!! note ""
-    You can also check all Drupal logs, inside the admin page `/admin/reports/dblog`.
+{:.alert .alert-info}
+You can also check all Drupal logs, inside the admin page `/admin/reports/dblog`.
 
 ## Multiple projects
 
-You can launch and manage many Drucker instances at the same time. This is usefull when you work on multiple website in parrallel.
+You can launch and manage many Drucker instances at the same time. This is useful when you work on multiple website in parallel.
 
-For example, if you have 2 projects in 2 differents folders, you can open **2** separated bash, and source the env of each project separately.
+For example, if you have 2 projects in 2 different folders, you can open **2** separated bash, and source the env of each project separately.
 
-To make it works, you need to set differents values inside the `drucker.config` of your projects:
+To make it works, you need to set different values inside the `drucker.config` of your projects:
 
   - `PROJECT_NAME` and `PROJECT_NAME_PLAIN` must have different values for each projects
   - `PUBLIC_WWW_PORT` and `PUBLIC_PMA_PORT` must have different ports for each projects
@@ -55,8 +55,8 @@ $ drush archive-restore --overwrite /home/www-data/drush-backups/archive-dump/pa
 ```
 Replace the `path/to/backup` by the path of the archive contained inside `drucker/docker-runtime/drush-backups`.
 
-!!! danger ""
-    This command will overwrite all your current files and database!
+{:.alert .alert-danger}
+This command will overwrite all your current files and database!
 
 ## Backup - SQL Database only
 
@@ -75,9 +75,9 @@ $ make sql-restore
 # prompt: enter the name of the backup to restore
 ```
 
-!!! note ""
-    - You can type `l` to list all the available backups.
-    - When the backup is restored, you'll be invited to sanitize the database (recommanded).
+{:.alert .alert-info}
+You can type `l` to list all the available backups.
+When the backup is restored, you'll be invited to sanitize the database (recommended).
 
 ## SQL Sanitize
 

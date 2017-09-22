@@ -32,8 +32,8 @@ Also, you can use preconfigured drush alias @dev:
 $ drush @dev
 ```
 
-!!! note ""
-    Launch `drush init` to add some additional useful features, like Drush auto-completion.
+{:.alert .alert-info}
+Launch `drush init` to add some additional useful features, like Drush auto-completion.
 
 **Useful commands:**
 
@@ -72,8 +72,8 @@ You can, for example, generate a module, using this command:
 $ drupal generate:module
 ```
 
-!!! note ""
-    Launch `drupal init` to add some additional useful features, like Drupal Console auto-completion.
+{:.alert .alert-info}
+Launch `drupal init` to add some additional useful features, like Drupal Console auto-completion.
 
 **Useful commands:**
 
