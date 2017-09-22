@@ -8,6 +8,9 @@ fi
 # enable error logging
 set -e
 
+git config --global user.email "$GH_MAIL"
+git config --global user.name "$GH_USER"
+
 echo "$GH_MAIL"
 echo "$GH_USER"
 echo "$GH_TOKEN"
@@ -21,8 +24,6 @@ bundle exec jekyll build
 
 # push
 cd _site
-git config user.email "$GH_MAIL"
-git config user.name "$GH_USER"
 git add --all
-git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
+git commit -am "Travis #$TRAVIS_BUILD_NUMBER"
 git push --force origin gh-pages
