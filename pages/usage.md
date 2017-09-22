@@ -14,12 +14,10 @@ These are the minimal steps to take if you set up and work with a project:
 
 If you run into troubles check the [Troubleshooting](troubleshooting.md) section.
 
----
-
 ## Quick start
 
-!!! note ""
-    To setup a new project, see [Fresh install of Drupal](#fresh-install-of-drupal-new-project) section below.
+{:.alert .alert-info}
+To setup a new project, see [Fresh install of Drupal](#fresh-install-of-drupal-new-project) section below.
 
 To setup the environment in an existing project powered by Drucker, follow these commands:
 
@@ -37,11 +35,11 @@ $ make start
 
 The script will create your personal `drucker.config` file during installation (see [Config](#config) section).
 
-!!! success ""
-    Now you can open the website at `http://www.*PROJECT_NAME_PLAIN*.local` (or `http://*SUBNET*.101` if you could not change /etc/hosts).
+{:.alert .alert-success}
+Now you can open the website at `http://www.*PROJECT_NAME_PLAIN*.local` (or `http://*SUBNET*.101` if you could not change /etc/hosts).
 
-!!! note ""
-    Change the `/etc/hosts` if you are root, in order to use hostnames instead of IPs.
+{:.alert .alert-info}
+Change the `/etc/hosts` if you are root, in order to use hostnames instead of IPs.
 
 Here's the list of all domains/IPs:
 
@@ -58,7 +56,7 @@ The default credentials for Drupal is:
 - Login: `admin`
 - Password: `admin`
 
-#### Makefile
+## Makefile
 
 The `Makefile` contains all the shortcuts to use the environment:
 
@@ -67,8 +65,6 @@ The `Makefile` contains all the shortcuts to use the environment:
 - `make install` : Install all the deps and prerequisites
 - `make start` : Start the application stack
 - `make stop` : Stop the application stack
-
----
 
 ## Loading the environment
 
@@ -84,39 +80,37 @@ This will setup aliases to use in your bash environment, in your current session
 Now, you can use some tools, like Drush or Composer, in a transparent way like if they are installed locally :).
 See [Tools](tools.md) section for the full documentation of these tools.
 
-!!! note ""
-    **Tips**: You have 2 folders shortcuts aliases:
+{:.alert .alert-info}
+**Tips**: You have 2 folders shortcuts aliases:
 
-    - `home` : to go directly inside the project dir
-    - `drucker` : to go directly inside the Drucker dir
-
----
+- `home` : to go directly inside the project dir
+- `drucker` : to go directly inside the Drucker dir
 
 ## Directory structure
 
 During setup, the directory structure will become something like this:
 
-!!! quote ""
-    * *Project*
-        * **drucker**
-            * **docker-runtime**
-                * **console**
-                * **drush**
-                * **drush-backups**
-                * **log**
-                * **mysql**
-                * **mysql-init**
-                * **sql-backups**
-            * **load-env**
-            * **Makefile**
-        * **drucker.config**
-        * **www**
-            * **config/sync**
+{:.well}
+* *Project*
+    * **drucker**
+        * **docker-runtime**
+            * **console**
             * **drush**
-            * **scripts/composer**
-            * **private**
-            * **tmp**
-            * **web**
+            * **drush-backups**
+            * **log**
+            * **mysql**
+            * **mysql-init**
+            * **sql-backups**
+        * **load-env**
+        * **Makefile**
+    * **drucker.config**
+    * **www**
+        * **config/sync**
+        * **drush**
+        * **scripts/composer**
+        * **private**
+        * **tmp**
+        * **web**
 
 * The name of ***Project*** can be chosen as you like.
 * **drucker** contains build files and utilities for Docker
@@ -132,8 +126,6 @@ During setup, the directory structure will become something like this:
     * **private** is a directory for holding the private files in Drupal, but outside the web root (`admin/config/media/file-system`, use `../private`, in D8: settings.php).
     * **tmp** is a directory for temporary files. It can be used as tmp-directory in Drupal (`admin/config/media/file-system`, use `../tmp`)
     * **web** is the webroot folder. Here all PHP-files and user created files will reside. See "Fresh install of Drupal".
-
----
 
 ## Config
 
@@ -162,8 +154,6 @@ See [Features/Multiple-Projects](features.md#multiple-projects) to know how to c
 
 !!! note ""
     You can (re-)generate it using `make gen-config`.
-
----
 
 ## Fresh install of Drupal (new project)
 
@@ -201,19 +191,13 @@ When installing the given `composer.json` some tasks are taken care of:
 !!! warning ""
     All the contrib folders and settings files must be GIT ignored.
 
----
-
 ## Updating Drupal Core
 
 Follow the steps to update your core files [here](https://github.com/drupal-composer/drupal-project#updating-drupal-core).
 
----
-
 ## Using in production
 
 Drucker is a development environment only. DO NOT USE IT IN PRODUCTION.
-
----
 
 ## Containers used
 
@@ -231,5 +215,3 @@ The Drucker stack consist of the following containers:
 | Node.js             | 8, 8-alpine        | node      | [node]    
 
 Some of the containers are overrided, see `lib/docker-images`.
-
----

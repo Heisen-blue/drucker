@@ -15,5 +15,3 @@ Please "source" the "load-env" file before.
 $ cd drucker
 $ source load-env
 ```
-
----

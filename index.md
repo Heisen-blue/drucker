@@ -71,5 +71,3 @@ See [Usage](usage.md) section.
 ## License
 
 GPL 3.0 (original license)
-
----

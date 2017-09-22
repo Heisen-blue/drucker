@@ -11,8 +11,6 @@ $ cd drucker
 $ . load-env
 ```
 
----
-
 ## PHP CLI
 
 You can use the PHP CLI directly in your environment.
@@ -21,8 +19,6 @@ $ php [options] [-f] <file> [args...]
 ```
 
 Note: if you just enter `php`, it'll launch a prompt inside the PHP container.
-
----
 
 ## Drush
 
@@ -48,8 +44,6 @@ $ drush @dev
 
 You can find all documentation [here](https://drushcommands.com).
 
----
-
 ## Composer
 
 PHP container has Composer installed.
@@ -64,8 +58,6 @@ $ composer
 - `composer require drupal/<module>` : Install a module from Drupal hub
 
 You can find all documentation [here](https://getcomposer.org/doc/03-cli.md).
-
----
 
 ## Drupal Console
 
@@ -89,8 +81,6 @@ $ drupal generate:module
 
 You can find all documentation [here](https://hechoendrupal.gitbooks.io/drupal-console/content/en/index.html).
 
----
-
 ## Node.js
 
 You have access to a Node.js container.
@@ -99,8 +89,6 @@ $ node [options] [v8 options] [script.js | -e "script" | -] [--] [arguments]
 ```
 
 Note: the current folder is mounted inside `/usr/src/app`, and it's the working dir.
-
----
 
 ## NPM/Yarn/Gulp
 
@@ -114,5 +102,3 @@ $ gulp
 ```
 
 Note: the current folder is mounted inside `/usr/src/app`, and it's the working dir.
-
----

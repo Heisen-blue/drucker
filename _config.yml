@@ -10,3 +10,5 @@ exclude:
 - scripts
 - README.md
 - vendor
+
+theme: ovh-jekyll-doc-theme

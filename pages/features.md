@@ -14,8 +14,6 @@ $ make logs
 !!! note ""
     You can also check all Drupal logs, inside the admin page `/admin/reports/dblog`.
 
----
-
 ## Multiple projects
 
 You can launch and manage many Drucker instances at the same time. This is usefull when you work on multiple website in parrallel.
@@ -43,8 +41,6 @@ Example:
     - You can open a *separated* bash and run `cd <project2>; cd drucker; source load-env; make start`.
     - -> your website will be accessible with the URL: `http://localhost:19590` (and `http://localhost:19591`)
 
----
-
 ## Backup - Full
 
 You can create a snapshot of all your Drupal at anytime (files and database), using this command:
@@ -61,8 +57,6 @@ Replace the `path/to/backup` by the path of the archive contained inside `drucke
 
 !!! danger ""
     This command will overwrite all your current files and database!
-
----
 
 ## Backup - SQL Database only
 
@@ -85,8 +79,6 @@ $ make sql-restore
     - You can type `l` to list all the available backups.
     - When the backup is restored, you'll be invited to sanitize the database (recommanded).
 
----
-
 ## SQL Sanitize
 
 You can sanitize the current database, using these commands:
@@ -97,8 +89,6 @@ $ make sql-sanitize
 
 This will reset all password accounts and emails.
 
----
-
 ## Accessing containers
 
 You can access PHP containers, using the shortcuts:
@@ -106,10 +96,6 @@ You can access PHP containers, using the shortcuts:
 - `php`: to run a shell inside the PHP container, as current user
 - `phproot`: to run a shell inside the PHP container, as root user (use it with caution!)
 
----
-
 ## Modules patches
 
 You can apply patches, using Composer: [read this](https://github.com/drupal-composer/drupal-project#how-can-i-apply-patches-to-downloaded-modules).
-
----
