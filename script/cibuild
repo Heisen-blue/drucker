@@ -8,6 +8,10 @@ fi
 # enable error logging
 set -e
 
+echo ${GH-MAIL}
+echo ${GH-USER}
+echo ${GH-TOKEN}
+
 rm -rf _site
 mkdir _site
 
