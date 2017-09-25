@@ -183,7 +183,7 @@ GEM
       mini_portile2 (~> 2.3.0)
     octokit (4.7.0)
       sawyer (~> 0.8.0, >= 0.5.3)
-    ovh-jekyll-doc-theme (0.1.5)
+    ovh-jekyll-doc-theme (0.2.3)
       jekyll (~> 3.5)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
