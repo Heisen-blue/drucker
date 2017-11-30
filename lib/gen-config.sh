@@ -61,6 +61,23 @@ while true; do
   fi
 done
 
+## PUBLIC_WWW_SSL_PORT
+while true; do
+  printf "\e[1mEnter the www SSL port:\e[0m (443) "
+  read PUBLIC_WWW_SSL_PORT
+
+  if [ -z $PUBLIC_WWW_SSL_PORT ]; then
+    PUBLIC_WWW_SSL_PORT=443
+  fi
+
+  REGEX='^[0-9]+$';
+  if ! [[ $PUBLIC_WWW_SSL_PORT =~ $REGEX ]]; then
+      echo "Invalid input. Please use only numbers."
+  else
+      break;
+  fi
+done
+
 ## PUBLIC_PMA_PORT
 while true; do
   printf "\e[1mEnter the phpMyAdmin port:\e[0m (80) "

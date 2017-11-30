@@ -70,6 +70,7 @@ services:
         ipv4_address: $WWW_IP
     ports:
       - "$PUBLIC_WWW_PORT:80"
+      - "$PUBLIC_WWW_SSL_PORT:443"
 
   mail:
     container_name: $MAIL_NAME
