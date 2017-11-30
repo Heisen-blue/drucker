@@ -61,17 +61,17 @@ while true; do
   fi
 done
 
-## PUBLIC_WWW_SSL_PORT
+## PUBLIC_WWW_SECURED_PORT
 while true; do
-  printf "\e[1mEnter the www SSL port:\e[0m (443) "
-  read PUBLIC_WWW_SSL_PORT
+  printf "\e[1mEnter the www secured port:\e[0m (443) "
+  read PUBLIC_WWW_SECURED_PORT
 
-  if [ -z $PUBLIC_WWW_SSL_PORT ]; then
-    PUBLIC_WWW_SSL_PORT=443
+  if [ -z $PUBLIC_WWW_SECURED_PORT ]; then
+    PUBLIC_WWW_SECURED_PORT=443
   fi
 
   REGEX='^[0-9]+$';
-  if ! [[ $PUBLIC_WWW_SSL_PORT =~ $REGEX ]]; then
+  if ! [[ $PUBLIC_WWW_SECURED_PORT =~ $REGEX ]]; then
       echo "Invalid input. Please use only numbers."
   else
       break;
@@ -197,7 +197,7 @@ cp -f "${DRUCKER_DIR}/templates/drucker.config" "${PROJECT_DIR}/drucker.config"
 sed -i "s/%%PROJECT_NAME%%/$PROJECT_NAME/g" "${PROJECT_DIR}/drucker.config"
 sed -i "s/%%PROJECT_NAME_PLAIN%%/$PROJECT_NAME_PLAIN/g" "${PROJECT_DIR}/drucker.config"
 sed -i "s/%%PUBLIC_WWW_PORT%%/$PUBLIC_WWW_PORT/g" "${PROJECT_DIR}/drucker.config"
-sed -i "s/%%PUBLIC_WWW_SSL_PORT%%/$PUBLIC_WWW_SSL_PORT/g" "${PROJECT_DIR}/drucker.config"
+sed -i "s/%%PUBLIC_WWW_SECURED_PORT%%/$PUBLIC_WWW_SECURED_PORT/g" "${PROJECT_DIR}/drucker.config"
 sed -i "s/%%PUBLIC_PMA_PORT%%/$PUBLIC_PMA_PORT/g" "${PROJECT_DIR}/drucker.config"
 sed -i "s/%%DRUPAL_VERSION%%/$DRUPAL_VERSION/g" "${PROJECT_DIR}/drucker.config"
 sed -i "s/%%PHP_VERSION%%/$PHP_VERSION/g" "${PROJECT_DIR}/drucker.config"
