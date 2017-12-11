@@ -3,10 +3,6 @@ MAINTAINER OVH-UX <github@ovh.net>
 
 ARG DOCKER_USER=1000
 ARG DOCKER_USER_GROUP=1001
-ARG CERT_COUNTRY=FR
-ARG CERT_STATE=Nord
-ARG CERT_CITY=Roubaix
-ARG CERT_FQDN=gw2sdev-docker.ovh.net
 
 # Switch to root
 # @see https://github.com/wodby/php/commit/d4c0b703310471b3555a360e343f6d7551162d37
@@ -27,11 +23,8 @@ RUN apk update && \
 # Generate self-signed certificate
 RUN openssl req \
 	-x509 -nodes -days 365 -sha256 \
-	-subj '/C=$CERT_COUNTRY/ST=$CERT_STATE/L=$CERT_CITY/CN=$CERT_FQDN' \
+	-subj '/C=FR/ST=Nord/L=Roubaix/CN=gw2sdev-docker.ovh.net' \
 	-newkey rsa:2048 -keyout /etc/ssl/certs/nginx.key -out /etc/ssl/certs/nginx.crt
-
-# Override
-ENV NGINX_SERVER_EXTRA_CONF_FILEPATH /var/www/html/server.conf
 
 # Re-switch to www-data
 # @see https://github.com/wodby/php/commit/d4c0b703310471b3555a360e343f6d7551162d37
