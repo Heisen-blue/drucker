@@ -257,7 +257,7 @@ function _create-database ()
 {
     cat <<EOF > "$(druckerdir)/docker-runtime/mysql-init/0-create_default_db.sql"
 DROP DATABASE IF EXISTS $DB_DRUPAL_DB;
-CREATE DATABASE $DB_DRUPAL_DB COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE $DB_DRUPAL_DB COLLATE utf8_unicode_ci;
 GRANT ALL
   ON $DB_DRUPAL_DB.*
   TO '$DB_DRUPAL_USER'@'%'
