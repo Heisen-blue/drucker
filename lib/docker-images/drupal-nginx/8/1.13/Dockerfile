@@ -28,6 +28,8 @@ RUN openssl req \
   -subj "/C=${CERT_COUNTRY}/ST=${CERT_STATE}/L=${CERT_CITY}/CN=${CERT_FQDN}" \
   -newkey rsa:2048 -keyout /etc/ssl/certs/nginx.key -out /etc/ssl/certs/nginx.crt
 
+RUN cp -f "${DRUCKER_DIR}/templates/server.conf" "${PROJECT_DIR}/www/server.conf"
+
 # Re-switch to www-data
 # @see https://github.com/wodby/php/commit/d4c0b703310471b3555a360e343f6d7551162d37
 USER www-data
