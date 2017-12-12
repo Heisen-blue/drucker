@@ -61,6 +61,9 @@ rm -rf "${tmp_drupal_dir}" 2> /dev/null
 # configure .gitignore
 cp -f "$(druckerdir)/templates/gitignore" "$(projectdir)/.gitignore"
 
+# configure server.conf
+cp -f "$(druckerdir)/templates/server.conf" "$(projectdir)/www/server.conf"
+
 # Greetings
 printf "\033[0;32m\e[1m[DONE]\e[0m Your Drupal \e[1m${PROJECT_NAME}\e[0m is ready. You must now run \e[1mmake install\e[0m to configure it.\n"
 
