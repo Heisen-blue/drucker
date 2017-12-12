@@ -192,6 +192,8 @@ done
 
 # ---
 
+cp -f "${DRUCKER_DIR}/templates/server.conf" "${PROJECT_DIR}/www/server.conf"
+
 cp -f "${DRUCKER_DIR}/templates/drucker.config" "${PROJECT_DIR}/drucker.config"
 
 sed -i "s/%%PROJECT_NAME%%/$PROJECT_NAME/g" "${PROJECT_DIR}/drucker.config"
