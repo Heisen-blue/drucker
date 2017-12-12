@@ -20,9 +20,7 @@ RUN apk --no-cache add shadow && usermod -u $DOCKER_USER www-data && groupmod -g
 RUN find / -group 82 -exec chgrp -h $DOCKER_USER_GROUP {} \; && find / -user 82 -exec chown -h $DOCKER_USER {} \;
 
 # Install OpenSSL
-RUN apk update && \
-  apk add --no-cache openssl && \
-  rm -rf /var/cache/apk/*
+RUN apk --no-cache add openssl
 
 # Generate self-signed certificate
 RUN openssl req \
