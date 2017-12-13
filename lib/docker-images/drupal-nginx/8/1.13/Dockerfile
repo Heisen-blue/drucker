@@ -30,4 +30,9 @@ RUN openssl req \
 
 # Re-switch to www-data
 # @see https://github.com/wodby/php/commit/d4c0b703310471b3555a360e343f6d7551162d37
+
 USER www-data
+
+# Add configuration for SSL
+COPY server.conf.tpl /etc/gotpl/
+COPY 30-drupal-nginx-ssl.sh /docker-entrypoint-init.d/

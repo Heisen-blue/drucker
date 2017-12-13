@@ -58,6 +58,7 @@ services:
       NGINX_DOCROOT: web # Relative path inside the /var/www/html/ directory.
       NGINX_SERVER_ROOT: /var/www/html/web
       NGINX_BACKEND_HOST: "$PHP_DOMAIN"
+      NGINX_SERVER_EXTRA_CONF_FILEPATH: /etc/nginx/server.conf
       DRUPAL_VERSION: $DRUPAL_VERSION
     volumes_from:
       - php
