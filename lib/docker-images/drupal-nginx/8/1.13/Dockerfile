@@ -6,7 +6,7 @@ ARG DOCKER_USER_GROUP=1001
 ARG CERT_COUNTRY=FR
 ARG CERT_STATE=Nord
 ARG CERT_CITY=Roubaix
-ARG CERT_FQDN=gw2sdev-docker.ovh.net
+ARG CERT_FQDN=test.example.com
 
 # Switch to root
 # @see https://github.com/wodby/php/commit/d4c0b703310471b3555a360e343f6d7551162d37
